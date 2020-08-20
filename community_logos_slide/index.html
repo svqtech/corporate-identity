@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SVQtech</title>
+        <style type="text/css">
+            .grid {
+                height: calc(100vh - 3 * 12px);
+                width: calc(100vw - 5 * 12px);
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-rows: auto;
+                grid-gap: 12px;
+                align-items: center;
+                justify-items: center;
+            }
+
+            .grid img {
+                max-height: 160px;
+                max-width: 240px;
+            }
+
+            .grid .main {
+                height: 320px;
+                max-height: 320px;
+                max-width: 100%;
+                grid-column: 3/6;
+                grid-row: 2/4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid" id="grid">
+            <img class="main" src="./img/svqtech.svg" alt="SVQtech">
+            <img src="./img/agilesur.png" alt="Agile Sur">
+            <img src="./img/aisaturdays.svg" alt="AI Saturdays Sevilla">
+            <img src="./img/databeers.png" alt="DataBeers">
+            <img src="./img/drupal.png" alt="Drupal Sevilla">
+            <img src="./img/ethereum.png" alt="Ethereum PoS SVQ">
+            <img src="./img/gdg.png" alt="GDG Sevilla">
+            <img src="./img/geoinquietas.svg" alt="GeoInquietas">
+            <img src="./img/hacking-sevilla.jpg" alt="Hacking Sevilla">
+            <img src="./img/jug.png" alt="Java Users Group Sevilla">
+            <img src="./img/owasp.jpg" alt="OWASP">
+            <img src="./img/ping-a-programadoras.png" alt="Ping a Programadoras">
+            <img src="./img/programamos.png" alt="Programamos">
+            <img src="./img/python-sevilla.png" alt="Python Sevilla">
+            <img src="./img/rails.png" alt="SVQ Rails">
+            <img src="./img/salesforce.png" alt="Salesforce Developer Sevilla">
+            <img src="./img/makers.png" alt="Sevilla Maker Society">
+            <img src="./img/sevilla-r.png" alt="Sevilla R">
+            <img src="./img/sevillajs.svg" alt="SevillaJS">
+            <img src="./img/svqnet.png" alt="SVQ dot net">
+            <img src="./img/things-network.png" alt="The Things Network Sevilla">
+            <img src="./img/sevilla-typescript.png" alt="Sevilla TypeScript">
+            <img src="./img/wpsevilla.png" alt="WordPress Sevilla">
+        </div>
+        <script>
+            const grid = document.getElementById('grid');
+            const imgs = document.querySelectorAll('img:not(.main)');
+            for (let i = imgs.length; i >= 0; i--) {
+                grid.appendChild(grid.children[Math.random() * i | 0]);
+            }
+        </script>
+    </body>
+</html>
